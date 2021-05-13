@@ -2,7 +2,7 @@ const applicationState = {
     requests: [],
 }
 
-const API = "http://localhost:5000"
+const API = "http://localhost:8080"
 
 
 
@@ -20,5 +20,5 @@ export const fetchRequests = () => {
 }
 
 export const getRequests = () => {
-    return [...applicationState]
+    return [...applicationState.requests]
 }
