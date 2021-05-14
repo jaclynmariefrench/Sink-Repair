@@ -4,7 +4,7 @@ const applicationState = {
 
 const API = "http://localhost:8080"
 
-
+const mainContainer = document.querySelector("#container")
 
 export const fetchRequests = () => {
     return fetch(`${API}/requests`)
@@ -32,9 +32,10 @@ export const sendRequest = (userServiceRequest) => {
     return fetch(`${API}/requests`, fetchOptions)
         .then(response => response.json())
         .then(() => {
-
+            mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
         })
 }
+
 
 export const getRequests = () => {
     return [...applicationState.requests]
