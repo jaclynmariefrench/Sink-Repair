@@ -17,6 +17,7 @@ export const Requests = () => {
                                     Description: ${requestObject.description}
                                     <div></div>
                                     Needed By: ${requestObject.neededBy}
+                                    <button class="request__delete" id="request--${requestObject.id}">Delete</button>
                                 </ul>
                             </div>
                         `
@@ -28,3 +29,13 @@ export const Requests = () => {
 
     return html
 }
+
+// return `
+//     <li>
+//         ${request.description}
+//         <button class="request__delete"
+//                 id="request--${request.id}">
+//             Delete
+//         </button>
+//     </li>
+// `

@@ -1,4 +1,4 @@
-import { fetchRequests } from "./dataAccess.js"
+import { deleteRequest, fetchRequests } from "./dataAccess.js"
 import { SinkRepair } from "./SinkRepair.js"
 
 
@@ -20,3 +20,11 @@ mainContainer.addEventListener(
         render()
     }
 )
+
+
+mainContainer.addEventListener("click", click => {
+    if (click.target.id.startsWith("request--")) {
+        const [,requestId] = click.target.id.split("--")
+        deleteRequest(parseInt(requestId))
+    }
+})
