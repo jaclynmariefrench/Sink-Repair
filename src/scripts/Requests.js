@@ -10,13 +10,18 @@ export const Requests = () => {
                     (requestObject) => {
                         return `
                             <div>
-                                <input type="checkbox" id="service--${requestObject.id}"
-                                Description: ${requestObject.description}
-                                Needed By: ${requestObject.neededBy}
+                                <ul>
+                                    <div></div>
+                                    Service Request: ${requestObject.id}
+                                    <div></div>
+                                    Description: ${requestObject.description}
+                                    <div></div>
+                                    Needed By: ${requestObject.neededBy}
+                                </ul>
                             </div>
                         `
                     }
-                )
+                ).join("")
             }
         </ul>
     `
