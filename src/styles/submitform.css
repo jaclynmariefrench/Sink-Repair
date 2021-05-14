@@ -1,0 +1,21 @@
+div {
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+}
+
+.serviceForm {
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 25px;
+}
+
+.input {
+    display: flex;
+}
+
+.button {
+    color: mintcream;
+    background: darkblue;
+}
+
